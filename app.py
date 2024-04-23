@@ -51,7 +51,7 @@ def main():
     city = input('Enter a City name: ')
     querystring = {'q': city}
     headers = {
-        "X-RapidAPI-Key": "778a2e7123msh5e3a530d8bfbf9cp188e4bjsnfc9bd024b4e0",
+        "X-RapidAPI-Key": "YOUR-API-KEY",
         "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
     }
     get_weather_data(url, querystring, headers)
