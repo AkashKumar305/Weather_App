@@ -12,7 +12,7 @@ This Python script retrieves current weather data for a specified city using the
     pip install requests
     ```
 
-4. Obtain an API key from [WeatherAPI](https://www.weatherapi.com/) and replace `'key'` in the `main()` function with your API key.
+4. Obtain an API key from [WeatherAPI](https://www.weatherapi.com/) and replace `'YOUR-API-KEY'` in the `main()` function with your API key.
 5. Run the script:
 
     ```
