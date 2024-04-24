@@ -1,5 +1,7 @@
+# Import Libraries
 import requests
 
+# Function to get the weather data
 def get_weather_data(url, querystring, headers):
     try:
         response = requests.get(url, headers=headers, params=querystring)
@@ -18,6 +20,7 @@ def get_weather_data(url, querystring, headers):
 
     display_weather_data(current_weather, location_info)
 
+# Function to display the weather data
 def display_weather_data(current_weather, location_info):
     cloud_cover = current_weather.get('cloud', '-')
     condition_text = current_weather.get('condition', {}).get('text', '-')
@@ -46,6 +49,7 @@ def display_weather_data(current_weather, location_info):
     print("Pressure: {} mb".format(pressure_mb))
     print("Visibility: {:.1f} km ({:.1f} miles)".format(visibility_km, visibility_miles))
 
+# Main function
 def main():
     url = "https://weatherapi-com.p.rapidapi.com/current.json"
     city = input('Enter a City name: ')
@@ -56,5 +60,6 @@ def main():
     }
     get_weather_data(url, querystring, headers)
 
+# Calling the main function
 if __name__ == '__main__':
     main()
